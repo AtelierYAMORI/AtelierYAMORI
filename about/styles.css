@@ -1,4 +1,87 @@
-/* Aboutページ全体 */
+/* ------------------------
+   全体共通
+------------------------ */
+body {
+  margin: 0;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
+  color: #222;
+  background-color: #fff;
+}
+
+/* ------------------------
+   ヘッダー・ナビ
+------------------------ */
+header {
+  display: flex;
+  justify-content: space-between; /* 左にサイト名、右にナビ */
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
+}
+
+/* ナビゲーション */
+nav ul {
+  list-style: none; /* 黒丸削除 */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
+}
+
+nav a:hover {
+  border-bottom: 1px solid #333;
+}
+
+/* ------------------------
+   ヒーローセクション（トップ画面）
+------------------------ */
+.hero {
+  height: 80vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* 左寄せ */
+  padding-left: 50px;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
+}
+
+/* 半透明オーバーレイ */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ------------------------
+   Aboutページ
+------------------------ */
 .about {
   display: flex;
   justify-content: center;
@@ -9,7 +92,6 @@
   font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
-/* プロフィールレイアウト */
 .profile-layout {
   display: flex;
   flex-direction: row;
@@ -19,7 +101,6 @@
   gap: 40px;
 }
 
-/* プロフィール写真 */
 .profile-photo {
   width: 220px;
   height: auto;
@@ -27,14 +108,12 @@
   object-fit: cover;
 }
 
-/* プロフィールテキスト */
 .profile-text {
   text-align: left;
   max-width: 600px;
   font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
-/* 名前 */
 .author-name {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -42,7 +121,6 @@
   font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
-/* 自己紹介文 */
 .bio {
   font-size: 0.9rem;
   line-height: 2.2;
@@ -50,17 +128,39 @@
   font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
-/* スマホ対応 */
+/* ------------------------
+   レスポンシブ対応
+------------------------ */
 @media (max-width: 768px) {
+  /* ナビを中央揃えに変更して折り返す */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  /* Aboutページのレイアウト変更 */
   .profile-layout {
     flex-direction: column;
     align-items: center;
   }
+
   .profile-text {
     text-align: left;
   }
+
   .profile-photo {
     width: 160px;
     margin-bottom: 20px;
+  }
+
+  /* ヒーローセクションの余白調整 */
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
