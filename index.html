@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My First Page</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    h1 { color: #333; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Highlight Example</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>こんにちは！</h1>
-  <p>これはGitHub Pagesで公開したホームページです。</p>
+  <header>
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>ここに自己紹介を記載します。</p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+      <p>ここに作品やプロジェクトの紹介を記載します。</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>お問い合わせ先を記載します。</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
