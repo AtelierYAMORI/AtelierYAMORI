@@ -1,0 +1,39 @@
+/* Aboutページ用 */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #fafafa;
+}
+
+.profile-card {
+  max-width: 600px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.author-name {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+}
