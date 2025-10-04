@@ -1,44 +1,4 @@
-/* Aboutページ用 */
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
-  background-color: #fafafa;
-}
-
-.profile-card {
-  max-width: 600px;
-  background: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.profile-photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.author-name {
-  font-family: 'Times New Roman', serif;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-.bio {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #444;
-  text-align: left;
-}
-
-/* Aboutページ（Hideaki Hamada風） */
+/* Aboutページ全体 */
 .about {
   display: flex;
   justify-content: center;
@@ -46,8 +6,10 @@
   min-height: 100vh;
   background-color: #fafafa;
   padding: 120px 20px;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
+/* プロフィールレイアウト */
 .profile-layout {
   display: flex;
   flex-direction: row;
@@ -57,6 +19,7 @@
   gap: 40px;
 }
 
+/* プロフィール写真 */
 .profile-photo {
   width: 220px;
   height: auto;
@@ -64,22 +27,27 @@
   object-fit: cover;
 }
 
+/* プロフィールテキスト */
 .profile-text {
   text-align: left;
   max-width: 600px;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
+/* 名前 */
 .author-name {
-  font-family: 'Times New Roman', serif;
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: #222;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
+/* 自己紹介文 */
 .bio {
   font-size: 0.9rem;
   line-height: 2.2;
   color: #444;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
 }
 
 /* スマホ対応 */
