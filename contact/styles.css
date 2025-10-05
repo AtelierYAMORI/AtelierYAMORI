@@ -1,0 +1,4 @@
+/* Worksページのみヘッダー下線を消す */
+header {
+  border-bottom: none;
+}
