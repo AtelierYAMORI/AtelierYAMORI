@@ -157,28 +157,3 @@ nav a:hover {
     width: 160px;
     margin-bottom: 20px;
   }
-
-/* 見出し共通 */
-.page-title {
-  margin-left: 1.5em;  /* 左余白を1.5文字分 */
-  font-size: 1.8rem;
-  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
-  margin-bottom: 1rem;
-}
-
-/* 本文共通 */
-.page-text {
-  margin-left: 1.5em;  /* 左余白を見出しに揃える */
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #333;
-  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
-}
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .page-title,
-  .page-text {
-    margin-left: 1em;  /* スマホは少し小さめ */
-  }
-}
