@@ -4,42 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Works | Atelier YAMORI</title>
-
-  <!-- =====================================================
-       CSS読み込み
-       1. styles.css → 全体共通デザイン
-       2. spacing.css → ページごとの余白・マージン管理
-  ===================================================== -->
+  <!-- 共通CSSの読み込み -->
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/spacing.css">
+  <style>
+    /* ------------------------
+       作品グリッド
+    ------------------------ */
+
+    /* グリッド全体 */
+    .works-grid {
+      display: grid; 
+      grid-template-columns: repeat(12, 1fr); /* 1行に12マス */
+      gap: 10px; /* マス間の余白 */
+      padding: 0 20px; /* 左右の余白 */
+    }
+
+    /* 個別作品カード */
+    .work-card {
+      position: relative; 
+      width: 100%; 
+      aspect-ratio: 6 / 7; /* 縦横比6:7 */
+      background-color: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    /* マウスオーバー時のアニメーション */
+    .work-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* 作品画像 */
+    .work-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* カードに合わせて切り抜き */
+      display: block;
+    }
+
+    /* 作品タイトル */
+    .work-title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      font-size: 0.9rem;
+      background-color: rgba(0,0,0,0.5); /* 半透明背景 */
+      color: #fff;
+      font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
+    }
+
+    /* スマホ対応：2列表示 */
+    @media (max-width: 768px) {
+      .works-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2列表示 */
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- =====================================================
-       ヘッダー
-       左にサイト名、右にナビゲーション
-  ===================================================== -->
-  <header class="works-header">
-    <h1><a href="../">Atelier YAMORI</a></h1>
-    <nav>
-      <ul>
-        <li><a href="../works/">Works</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- ヘッダー -->
+<header class="works-header">
+  <h1><a href="../">Atelier YAMORI</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../works/">Works</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- =====================================================
-       メインコンテンツ
-       ここからページ固有の内容
-  ===================================================== -->
- <main>
-  <!-- 見出し -->
-  <h2 class="works-title">Works</h2>
+<!-- メインコンテンツ -->
+<main>
+  <h2 class="page-title">Works</h2>
 
-  <!-- 本文 -->
-  <p class="works-text">ここに作品一覧を掲載します。</p>
+  <!-- 作品グリッド -->
+  <div class="works-grid">
+
+    <!-- 1作品目 -->
+    <div class="work-card">
+      <a href="little-tree-vol1.html">
+        <img src="images/sample1.jpg" alt="LITTLE TREE vol.1">
+        <h3 class="work-title">LITTLE TREE vol.1</h3>
+      </a>
+    </div>
+
+    <!-- 2作品目 -->
+    <div class="work-card">
+      <a href="little-tree-vol2.html">
+        <img src="images/sample2.jpg" alt="LITTLE TREE vol.2">
+        <h3 class="work-title">LITTLE TREE vol.2</h3>
+      </a>
+    </div>
+
+    <!-- 3～12作品目（サンプル） -->
+    <div class="work-card"><a href="#"><img src="images/sample3.jpg" alt=""><h3 class="work-title">Sample 3</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample4.jpg" alt=""><h3 class="work-title">Sample 4</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample5.jpg" alt=""><h3 class="work-title">Sample 5</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample6.jpg" alt=""><h3 class="work-title">Sample 6</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample7.jpg" alt=""><h3 class="work-title">Sample 7</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample8.jpg" alt=""><h3 class="work-title">Sample 8</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample9.jpg" alt=""><h3 class="work-title">Sample 9</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample10.jpg" alt=""><h3 class="work-title">Sample 10</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample11.jpg" alt=""><h3 class="work-title">Sample 11</h3></a></div>
+    <div class="work-card"><a href="#"><img src="images/sample12.jpg" alt=""><h3 class="work-title">Sample 12</h3></a></div>
+
+  </div>
 </main>
 
 </body>
