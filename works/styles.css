@@ -3,34 +3,38 @@ header.works-header {
   border-bottom: none;
 }
 
-/* Worksページの見出し */
-.works-title {
-  margin-left: 1.5em; /* 左から1.5文字分右にずらす */
-  font-size: 1.8rem;
-  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
-  margin-bottom: 1rem;
+/* Worksページ全体の余白を調整 */
+main {
+  padding: 0 20px; /* 左右の内側余白を20pxに統一 */
 }
 
-/* Worksページの本文 */
-main p {
-  margin-left: 1.5em; /* 見出しに揃えて右にずらす */
+/* 見出し */
+.works-title {
+  margin: 0; /* 外側の余白はなし */
+  padding-left: 20px; /* main の padding と同じ左位置に揃える */
+  font-size: 1.8rem;
+  font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
+  margin-bottom: 1rem; /* 見出し下の余白 */
+}
+
+/* 本文 */
+.works-text {
+  margin: 0; /* 外側の余白なし */
+  padding-left: 20px; /* 見出しと同じ位置に揃える */
   font-size: 1rem;
   line-height: 1.8;
   color: #333;
   font-family: "Times New Roman", "游明朝体", "Yu Mincho", serif;
-}
-
-/* Worksページ全体の余白調整 */
-main {
-  padding: 40px 20px;
+  margin-bottom: 2rem; /* 本文下の余白 */
 }
 
 /* スマホ対応 */
 @media (max-width: 768px) {
-  .works-title, main p {
-    margin-left: 1em; /* スマホは少し小さく調整 */
-  }
   main {
-    padding: 20px 10px;
+    padding: 0 10px; /* 画面が狭い場合は左右の余白を少し減らす */
+  }
+  .works-title,
+  .works-text {
+    padding-left: 10px; /* 左位置も縮小して揃える */
   }
 }
